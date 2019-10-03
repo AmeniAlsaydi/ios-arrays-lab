@@ -56,6 +56,28 @@ Iterate through the array below. For each sentence, print out how many non-white
 
 `let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]`
 
+```swift
+var counter = 0
+for char in myString {
+    if char != " "{
+        counter += 1
+    }
+}
+
+print("There are \(counter) non space charctaers in myString")
+
+var count = 0
+
+for quote in myFavoriteQuotes {
+    for char in quote {
+        if char != " "{
+            count += 1
+        }
+    }
+    print("There is \(count) in the quote: \(quote) ")
+count = 0
+}
+```
 
 ## Question 5
 
@@ -64,6 +86,16 @@ Iterate through `garden` and place any 🌷 that you find into the `basket`. Rep
 ```swift
 var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
 var basket = [String]()
+
+for (index, item) in garden.enumerated() {
+    if item == "🌷" {
+        basket.append(item)
+        garden[index] = "dirt"
+    }
+}
+
+print("There are \(basket.count) in my garden")
+// print(garden)
 ```
 
 ## Question 6
