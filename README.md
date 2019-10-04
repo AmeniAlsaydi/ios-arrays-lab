@@ -11,6 +11,8 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
 ```swift
+//Answer:
+
 let colors = [ "orange", "red", "yellow", "turquoise", "lavender"]
 
 let favColor = "\(colors[0]), \(colors[2]) and \(colors[colors.count - 1]) are some of my favorite colors"
@@ -24,6 +26,8 @@ Remove "Illinois" and "Kansas" from the array below.
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
 
 ```swift
+//Answer:
+
 
 westernStates.remove(at: 5)
 westernStates.remove(at: 4)
@@ -37,6 +41,9 @@ Iterate through the array below. For each state, print out the name of the state
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
 
 ```swift
+
+//Answer:
+
 for state in moreStates {
     if state != "Hawaii" {
         print("\(state): is in the continental United States")
@@ -57,6 +64,9 @@ Iterate through the array below. For each sentence, print out how many non-white
 `let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]`
 
 ```swift
+
+//Answer:
+
 var counter = 0
 for char in myString {
     if char != " "{
@@ -84,6 +94,8 @@ count = 0
 Iterate through `garden` and place any 🌷 that you find into the `basket`. Replace any 🌷 that you pick up with `"dirt"`. Then print how many 🌷 are in your `basket`.
 
 ```swift
+//Answer:
+
 var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
 var basket = [String]()
 
@@ -110,6 +122,8 @@ The below array represents an unfinished batting lineup for a baseball team. **Y
 `var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]`
 
 ```swift
+//Answer:
+
 //Add
 battingLineup.append("Suzuki")
 
@@ -136,6 +150,8 @@ Given an array of Ints, find out if it contains a target number.
 var numbers: [Int]
 
 let target: Int = 32
+
+// Answer:
 
 var contains = false
 
@@ -271,6 +287,29 @@ input: `["apes", "abba", "apple"]`
 
 output: `"abba"`
 
+```swift
+var mostACount = 0
+var stringWithMostAs = ""
+
+for str in arr {
+    var LocalACount = 0 
+    
+    for char in str{ 
+        if char == "a" { //"apes"
+            LocalACount += 1
+        }
+    }
+    
+    // here we will compare a's count
+    if LocalACount > mostACount {
+        mostACount = LocalACount
+        stringWithMostAs = str
+    }
+}
+
+print(stringWithMostAs) // Prints "abba"
+
+```
 
 ## Question 7
 
