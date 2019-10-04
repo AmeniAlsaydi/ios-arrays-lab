@@ -94,7 +94,7 @@ for (index, item) in garden.enumerated() {
     }
 }
 
-print("There are \(basket.count) in my garden")
+print("There are \(basket.count) 🌷 in my garden")
 // print(garden)
 ```
 
@@ -109,6 +109,21 @@ The below array represents an unfinished batting lineup for a baseball team. **Y
 
 `var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]`
 
+```swift
+//Add
+battingLineup.append("Suzuki")
+
+//Replace
+let firstIndexOfJeter = (Int(battingLineup.firstIndex(of: "Jeter") ?? 1))
+let firstIndexOfThmoas = (Int(battingLineup.firstIndex(of: "Thomas") ?? 1))
+battingLineup[firstIndexOfJeter] = "Tejada"
+battingLineup[firstIndexOfThmoas] = "Guerrero"
+
+//Move
+battingLineup.remove(at: 0)
+battingLineup.insert("Reyes", at: 7)
+print(battingLineup)
+```
 
 ## Question 7
 
@@ -121,6 +136,16 @@ Given an array of Ints, find out if it contains a target number.
 var numbers: [Int]
 
 let target: Int = 32
+
+var contains = false
+
+for num in numbers {
+    if num == target {
+        contains = true
+    }
+}
+
+print(contains)
 ```
 
 Ex.1
