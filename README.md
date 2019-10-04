@@ -193,7 +193,19 @@ Find the largest value in an array of Int.  Do not use the built-in `max()` meth
 let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int($0)}
 
 //This creates an array of 100 numbers in between 0 and 200.  For now, you don't need to worry about how it does that.
+
+//Answer
+
+var largestNum = 0
+for num in arrayOfNumbers {
+    if num > largestNum {
+        largestNum = num
+    }
+}
+
+print(largestNum)
 ```
+
 
 
 ## Question 9
@@ -204,6 +216,19 @@ Find the smallest value in an array of Int.  Do not use the built in min() metho
 let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int($0)}
 
 //This creates an array of 100 numbers in between 0 and 200.  For now, you don't need to worry about how it does that.
+
+//Answer:
+
+var smallestNum = arrayOfNumbers[0]
+
+for num in arrayOfNumbers {
+    if num < smallestNum {
+        smallestNum = num
+    }
+}
+
+print(smallestNum)
+
 ```
 
 
@@ -212,14 +237,33 @@ let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int
 Iterate through `secondListOfNumbers`, and print out all the odd numbers.
 
 `var secondListOfNumbers = [19,13,14,19,101,10000,141,404]`
+```swift
+//Answer:
 
+for num in secondListOfNumbers {
+    if num % 2 == 1 {
+        print(num)
+    }
+}
+
+```
 
 ## Question 11
 
 Iterate through `thirdListOfNumbers`, and print out the sum.
 
 `var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]`
+```swift
+// Answer:
 
+var sum = 0
+
+for num in thirdListOfNumbers {
+    sum += num
+}
+
+print(sum)
+```
 
 ## Question 12
 
@@ -227,6 +271,19 @@ Iterate through `thirdListOfNumbers`, and print out the sum of all the even numb
 
 `var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]`
 
+```swift
+Answer:
+
+var newSum = 0
+
+for num in thirdListOfNumbers {
+    if num % 2 == 0 {
+        newSum += num
+    }
+}
+
+print(newSum)
+```
 
 ## Question 13
 
@@ -236,6 +293,18 @@ Append every Int that appears in both `listOne` and `listTwo` to the `sharedElem
 var listOne = [28, 64, 7, 96, 13, 32, 94, 11, 80, 68]
 var listTwo = [18, 94, 48, 6, 42, 68, 79, 76, 13, 7]
 var sharedElements = [Int]()
+
+// Answer:
+
+for num1 in listOne {
+    for num2 in listTwo{
+        if num1 == num2 {
+            sharedElements.append(num1)
+        }
+    }
+}
+
+print(sharedElements)
 ```
 
 # Part 2
